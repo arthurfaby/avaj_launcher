@@ -1,4 +1,4 @@
-package coordinates;
+package fr.afaby.avaj_launcher.aircraft;
 
 public class Coordinates {
 
@@ -19,12 +19,11 @@ public class Coordinates {
 
     /**
      * Constructor
-     * 
-     * @param p_longitude
-     * @param p_latitude
-     * @param p_height
+     * @param p_longitude Latitude coordinate
+     * @param p_latitude  Longitude coordinate
+     * @param p_height    Height coordinate
      */
-    public Coordinates(int p_longitude, int p_latitude, int p_height) {
+    Coordinates(int p_longitude, int p_latitude, int p_height) {
         this.longitude = p_longitude;
         this.latitude = p_latitude;
         this.height = p_height;
@@ -50,7 +49,7 @@ public class Coordinates {
 
     /**
      * Getter for height
-     * 
+     *
      * @return height
      */
     public int getHeight() {
@@ -60,7 +59,7 @@ public class Coordinates {
     /**
      * Setter for longitude
      * 
-     * @param p_longitude
+     * @param p_longitude Longitude coordinate
      */
     public void setLongitude(int p_longitude) {
         this.longitude = p_longitude;
@@ -73,7 +72,7 @@ public class Coordinates {
     /**
      * Setter for latitude
      * 
-     * @param p_latitude
+     * @param p_latitude Latitude coordinate
      */
     public void setLatitude(int p_latitude) {
         this.latitude = p_latitude;
@@ -86,7 +85,7 @@ public class Coordinates {
     /**
      * Setter for height
      * 
-     * @param p_height
+     * @param p_height Height coordinate
      */
     public void setHeight(int p_height) {
         this.height = p_height;

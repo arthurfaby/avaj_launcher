@@ -1,20 +1,24 @@
-package aircraft;
+package fr.afaby.avaj_launcher.aircraft;
 
-import coordinates.Coordinates;
-import file.OutputLog;
+import fr.afaby.avaj_launcher.file.OutputLog;
 
 public class Aircraft extends Flyable {
+
+    public static String snowMessage = "Snow.";
+    public static String rainMessage = "Rain.";
+    public static String sunMessage = "Sun.";
+    public static String fogMessage = "Fog.";
 
     protected long id;
     protected String name;
     protected Coordinates coordinates;
     protected String type;
 
-    private static int nbOfAircrafts = 0;
+    private static int nbOfAircraft = 0;
 
     protected Aircraft(String p_name, Coordinates p_coordinates, String p_type) {
-        Aircraft.nbOfAircrafts++;
-        this.id = Aircraft.nbOfAircrafts;
+        Aircraft.nbOfAircraft++;
+        this.id = Aircraft.nbOfAircraft;
         this.name = p_name;
         this.coordinates = p_coordinates;
         this.type = p_type;
@@ -42,12 +46,13 @@ public class Aircraft extends Flyable {
                 this.updateSnowyConditions();
                 break;
             default:
-                OutputLog.log(prefix + "Unknown weather type.");
+                OutputLog.log(prefix + " Unknown weather type.");
                 break;
         }
     }
 
     public String getPrefix() {
+//        return this.type + "#" + this.name + "(" + this.coordinates.getLongitude() + " - " + this.coordinates.getLatitude() + " - " + this.coordinates.getHeight() + "): ";
         return this.type + "#" + this.name + "(" + this.id + ")";
     }
 
@@ -65,5 +70,12 @@ public class Aircraft extends Flyable {
 
     protected void updateSnowyConditions() {
         throw new UnsupportedOperationException("Should not be called.");
+    }
+
+    protected void checkHeight() {
+        if (this.coordinates.getHeight() <= 0) {
+            OutputLog.log(this.getPrefix() + " landing.");
+            this.weatherTower.unregister(this);
+        }
     }
 }

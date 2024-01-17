@@ -1,6 +1,4 @@
-package file;
-
-import java.io.File;
+package fr.afaby.avaj_launcher.file;
 
 public class OutputLog {
     private static OutputLog outputLog = new OutputLog();

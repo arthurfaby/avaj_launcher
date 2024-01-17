@@ -1,7 +1,7 @@
-package weather;
+package fr.afaby.avaj_launcher.weather;
 
-import coordinates.Coordinates;
-import tower.Tower;
+import fr.afaby.avaj_launcher.aircraft.Coordinates;
+import fr.afaby.avaj_launcher.tower.Tower;
 
 public class WeatherTower extends Tower {
 
@@ -9,7 +9,7 @@ public class WeatherTower extends Tower {
     }
 
     public String getWeather(Coordinates coordinates) {
-        return WeatherProvider.getProvider().getCurrentWeather(coordinates);
+        return WeatherProvider.getCurrentWeather(coordinates);
     }
 
     public void changeWeather() {

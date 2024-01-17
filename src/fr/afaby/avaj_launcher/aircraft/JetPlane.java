@@ -1,7 +1,6 @@
-package aircraft;
+package fr.afaby.avaj_launcher.aircraft;
 
-import coordinates.Coordinates;
-import file.OutputLog;
+import fr.afaby.avaj_launcher.file.OutputLog;
 
 public class JetPlane extends Aircraft {
 
@@ -11,27 +10,29 @@ public class JetPlane extends Aircraft {
 
     @Override
     protected void updateSunnyConditions() {
+        OutputLog.log(this.getPrefix() + ": Sun.");
         this.coordinates.setLatitude(this.coordinates.getLatitude() + 10);
         this.coordinates.setHeight(this.coordinates.getHeight() + 2);
-        OutputLog.log(this.getPrefix() + ": Sun.");
+        this.checkHeight();
     }
 
     @Override
     protected void updateRainyConditions() {
-        this.coordinates.setLatitude(this.coordinates.getLatitude() + 5);
         OutputLog.log(this.getPrefix() + ": Rain.");
+        this.coordinates.setLatitude(this.coordinates.getLatitude() + 5);
     }
 
     @Override
     protected void updateFoggyConditions() {
-        this.coordinates.setLatitude(this.coordinates.getLatitude() + 1);
         OutputLog.log(this.getPrefix() + ": Fog.");
+        this.coordinates.setLatitude(this.coordinates.getLatitude() + 1);
     }
 
     @Override
     protected void updateSnowyConditions() {
-        this.coordinates.setHeight(this.coordinates.getHeight() - 7);
         OutputLog.log(this.getPrefix() + ": Snow.");
+        this.coordinates.setHeight(this.coordinates.getHeight() - 7);
+        this.checkHeight();
     }
 
 }

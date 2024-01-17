@@ -1,6 +1,6 @@
-package aircraft;
+package fr.afaby.avaj_launcher.aircraft;
 
-import weather.WeatherTower;
+import fr.afaby.avaj_launcher.weather.WeatherTower;
 
 /**
  * Flyable class
@@ -14,4 +14,6 @@ public abstract class Flyable {
     public void registerTower(WeatherTower p_tower) {
         this.weatherTower = p_tower;
     }
+
+    public abstract String getPrefix();
 }

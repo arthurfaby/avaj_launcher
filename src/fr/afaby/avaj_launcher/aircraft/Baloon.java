@@ -1,7 +1,6 @@
-package aircraft;
+package fr.afaby.avaj_launcher.aircraft;
 
-import coordinates.Coordinates;
-import file.OutputLog;
+import fr.afaby.avaj_launcher.file.OutputLog;
 
 public class Baloon extends Aircraft {
 
@@ -10,27 +9,32 @@ public class Baloon extends Aircraft {
     }
 
     protected void updateSunnyConditions() {
+        OutputLog.log(this.getPrefix() + ": Sun.");
         this.coordinates.setLongitude(this.coordinates.getLongitude() + 2);
         this.coordinates.setHeight(this.coordinates.getHeight() + 4);
-        OutputLog.log(this.getPrefix() + ": Sun.");
+        this.checkHeight();
     }
 
     @Override
     protected void updateRainyConditions() {
-        this.coordinates.setHeight(this.coordinates.getHeight() - 5);
         OutputLog.log(this.getPrefix() + ": Rain.");
+        this.coordinates.setHeight(this.coordinates.getHeight() - 5);
+        this.checkHeight();
     }
 
     @Override
     protected void updateFoggyConditions() {
-        this.coordinates.setHeight(this.coordinates.getHeight() - 3);
         OutputLog.log(this.getPrefix() + ": Fog.");
+        this.coordinates.setHeight(this.coordinates.getHeight() - 3);
+        this.checkHeight();
     }
 
     @Override
     protected void updateSnowyConditions() {
-        this.coordinates.setHeight(this.coordinates.getHeight() - 15);
         OutputLog.log(this.getPrefix() + ": Snow.");
+        this.coordinates.setHeight(this.coordinates.getHeight() - 15);
+        this.checkHeight();
     }
+
 
 }

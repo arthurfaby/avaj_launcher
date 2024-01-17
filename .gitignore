@@ -1,7 +1,8 @@
-# Compiled class file
+# Compiled class fr.afaby.avaj_launcher.file
 *.class
+/out/
 
-# Log file
+# Log fr.afaby.avaj_launcher.file
 *.log
 
 # BlueJ files
