@@ -1,14 +1,14 @@
-package fr.afaby.avaj_launcher.tower;
+package fr.afaby.avaj.tower;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.afaby.avaj_launcher.aircraft.Flyable;
-import fr.afaby.avaj_launcher.file.OutputLog;
+import fr.afaby.avaj.aircraft.Flyable;
+import fr.afaby.avaj.file.OutputLog;
 
 public class Tower {
 
-    private List<Flyable> observers;
+    private final List<Flyable> observers;
 
     public Tower() {
         this.observers = new ArrayList<>();

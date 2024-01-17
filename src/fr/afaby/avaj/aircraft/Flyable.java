@@ -1,6 +1,6 @@
-package fr.afaby.avaj_launcher.aircraft;
+package fr.afaby.avaj.aircraft;
 
-import fr.afaby.avaj_launcher.weather.WeatherTower;
+import fr.afaby.avaj.weather.WeatherTower;
 
 /**
  * Flyable class

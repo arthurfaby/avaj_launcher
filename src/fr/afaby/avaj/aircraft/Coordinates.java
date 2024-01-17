@@ -1,4 +1,4 @@
-package fr.afaby.avaj_launcher.aircraft;
+package fr.afaby.avaj.aircraft;
 
 public class Coordinates {
 
