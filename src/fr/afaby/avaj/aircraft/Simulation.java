@@ -36,6 +36,12 @@ public class Simulation {
         }
     }
 
+    /**
+     * Parse the scenario file.
+     * @param weatherTower Weather tower
+     * @param lineIndex Line index
+     * @throws InvalidAircraftType Invalid aircraft type
+     */
     private static void parseLine(WeatherTower weatherTower, int lineIndex) throws InvalidAircraftType {
         String[] aircraftData = Main.lines[lineIndex].split(" ");
         Coordinates coordinates = new Coordinates(Integer.parseInt(aircraftData[2]), Integer.parseInt(aircraftData[3]), Integer.parseInt(aircraftData[4]));
