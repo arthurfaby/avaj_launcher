@@ -1,10 +1,41 @@
-25
-Baloon B1 2 3 20
-Baloon B2 1 8 66
-JetPlane J1 23 44 32
-Helicopter H1 654 33 20
-Helicopter H2 22 33 44
-Helicopter H3 98 68 99
-Baloon B3 102 22 34
-JetPlane J2 11 99 768
-Helicopter H4 223 23 54
+Tower says: Baloon#B1(0) registered to weather tower.
+Tower says: Helicopter#H4(1) registered to weather tower.
+Tower says: Helicopter#H4(2) registered to weather tower.
+Tower says: Helicopter#H4(3) registered to weather tower.
+Baloon#B1(0): Fog.
+Helicopter#H4(1): Rain.
+Helicopter#H4(2): Rain.
+Helicopter#H4(3): Rain.
+Baloon#B1(0): Sun.
+Helicopter#H4(1): Fog.
+Helicopter#H4(2): Fog.
+Helicopter#H4(3): Fog.
+Baloon#B1(0): Rain.
+Helicopter#H4(1): Sun.
+Helicopter#H4(2): Sun.
+Helicopter#H4(3): Sun.
+Baloon#B1(0): Snow.
+Helicopter#H4(1): Sun.
+Helicopter#H4(2): Sun.
+Helicopter#H4(3): Sun.
+Baloon#B1(0): Rain.
+Baloon#B1(0) landing.
+Tower says: Baloon#B1(0) unregistered to weather tower.
+Helicopter#H4(1): Sun.
+Helicopter#H4(2): Sun.
+Helicopter#H4(3): Sun.
+Helicopter#H4(1): Sun.
+Helicopter#H4(2): Sun.
+Helicopter#H4(3): Sun.
+Helicopter#H4(1): Sun.
+Helicopter#H4(2): Sun.
+Helicopter#H4(3): Sun.
+Helicopter#H4(1): Sun.
+Helicopter#H4(2): Sun.
+Helicopter#H4(3): Sun.
+Helicopter#H4(1): Sun.
+Helicopter#H4(2): Sun.
+Helicopter#H4(3): Sun.
+Helicopter#H4(1): Sun.
+Helicopter#H4(2): Sun.
+Helicopter#H4(3): Sun.

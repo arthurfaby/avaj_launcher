@@ -6,10 +6,19 @@ import java.util.List;
 import fr.afaby.avaj.aircraft.Flyable;
 import fr.afaby.avaj.file.OutputLog;
 
+/**
+ * Tower class
+ */
 public class Tower {
 
+    /**
+     * List of flyables
+     */
     private final List<Flyable> observers;
 
+    /**
+     * Constructor.
+     */
     public Tower() {
         this.observers = new ArrayList<>();
     }
@@ -19,23 +28,35 @@ public class Tower {
      */
     public static List<Flyable> flyablesToDeleteFromTower = new ArrayList<>();
 
-    public void register(Flyable flyable) {
-        if (this.observers.contains(flyable)) {
+    /**
+     * Register a flyable to the tower.
+     * @param p_flyable Flyable to register.
+     */
+    public void register(Flyable p_flyable) {
+        if (this.observers.contains(p_flyable)) {
             return;
         }
-        if (flyable == null) {
+        if (p_flyable == null) {
             return;
         }
-        this.observers.add(flyable);
-        OutputLog.log("Tower says: " + flyable.getPrefix() + " registered to weather tower.");
+        this.observers.add(p_flyable);
+        OutputLog.getInstance().log("Tower says: " + p_flyable.getPrefix() + " registered to weather tower.");
     }
 
-    public void unregister(Flyable flyable) {
-        Tower.flyablesToDeleteFromTower.add(flyable);
-        OutputLog.log("Tower says: " + flyable.getPrefix() + " unregistered to weather tower.");
+    /**
+     * Unregister a flyable from the tower.
+     * @param p_flyable Flyable to unregister.
+     */
+    public void unregister(Flyable p_flyable) {
+        Tower.flyablesToDeleteFromTower.add(p_flyable);
+        OutputLog.getInstance().log("Tower says: " + p_flyable.getPrefix() + " unregistered to weather tower.");
     }
 
-    public void conditionsChanged() {
+    /**
+     * Notify the flyables that the weather has changed.
+     * Delete the flyables that have landed.
+     */
+    protected void conditionChanged() {
         for (Flyable flyable : this.observers) {
             flyable.updateConditions();
         }

@@ -3,17 +3,29 @@ package fr.afaby.avaj.weather;
 import fr.afaby.avaj.aircraft.Coordinates;
 import fr.afaby.avaj.tower.Tower;
 
+/**
+ * WeatherTower class
+ */
 public class WeatherTower extends Tower {
 
-    public WeatherTower() {
-    }
+    /**
+     * Constructor
+     */
+    public WeatherTower() {}
 
+    /**
+     * Get the weather
+     * @param coordinates Coordinates
+     * @return Weather
+     */
     public String getWeather(Coordinates coordinates) {
-        return WeatherProvider.getCurrentWeather(coordinates);
+        return WeatherProvider.getInstance().getCurrentWeather(coordinates);
     }
 
+    /**
+     * Change the weather
+     */
     public void changeWeather() {
-        // TODO implement and document this method
-        this.conditionsChanged();
+        this.conditionChanged();
     }
 }

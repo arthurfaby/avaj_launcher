@@ -9,5 +9,9 @@ src/fr/afaby/avaj/aircraft/Aircraft.java
 src/fr/afaby/avaj/aircraft/Baloon.java
 src/fr/afaby/avaj/aircraft/JetPlane.java
 src/fr/afaby/avaj/aircraft/AircraftFactory.java
+src/fr/afaby/avaj/exceptions/FileIsEmpty.java
+src/fr/afaby/avaj/exceptions/CantReadFile.java
+src/fr/afaby/avaj/exceptions/InvalidAircraftType.java
+src/fr/afaby/avaj/exceptions/IncorrectLine.java
 src/fr/afaby/avaj/weather/WeatherProvider.java
 src/fr/afaby/avaj/weather/WeatherTower.java

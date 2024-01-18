@@ -2,6 +2,10 @@ package fr.afaby.avaj.aircraft;
 
 import fr.afaby.avaj.file.OutputLog;
 
+/**
+ * Aircraft class. This class extends Flyable class.
+ * @see Flyable
+ */
 public class Aircraft extends Flyable {
 
     /**
@@ -46,15 +50,14 @@ public class Aircraft extends Flyable {
 
     /**
      * Constructor.
+     * @param p_id             Aircraft id.
      * @param p_name           Aircraft name.
-     * @param p_coordinates    Aircraft coordinates.
-     * @param p_type           Aircraft type.
+     * @param p_coordinate     Aircraft coordinates.
      */
-    protected Aircraft(int p_id, String p_name, Coordinates p_coordinates, String p_type) {
+    protected Aircraft(long p_id, String p_name, Coordinates p_coordinate) {
         this.id = p_id;
         this.name = p_name;
-        this.coordinates = p_coordinates;
-        this.type = p_type;
+        this.coordinates = p_coordinate;
     }
 
     /**
@@ -79,7 +82,7 @@ public class Aircraft extends Flyable {
      */
     protected void checkHeight() {
         if (this.coordinates.getHeight() <= 0) {
-            OutputLog.log(this.getPrefix() + " landing.");
+            OutputLog.getInstance().log(this.getPrefix() + " landing.");
             this.weatherTower.unregister(this);
         }
     }

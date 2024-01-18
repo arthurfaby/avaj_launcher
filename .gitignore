@@ -15,3 +15,5 @@
 *.rar
 hs_err_pid*
 replay_pid*
+scenariosave.txt
+sources.txt

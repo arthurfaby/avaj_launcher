@@ -1,5 +1,8 @@
 package fr.afaby.avaj.aircraft;
 
+/**
+ * Coordinates class to store the coordinates of an aircraft.
+ */
 public class Coordinates {
 
     /**
